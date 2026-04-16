@@ -68,7 +68,7 @@ body {
 .screen {
   display: none;
   padding: 0.9rem;
-  min-height: 560px;
+  min-height: 555px;
 }
 
 .screen.active {
@@ -241,24 +241,103 @@ input {
 .tab-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.4rem;
-  padding: 0.45rem 0.4rem;
+  gap: 0;
+  padding: 0.22rem 0.1rem 0.18rem;
   border-top: 1px solid var(--line);
-  background: #efefef;
+  background: #f1f1f1;
 }
 
 .tab-bar button {
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
-  background: #e2e2e2;
-  padding: 0.28rem;
-  font-size: 0.72rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.1rem 0;
   cursor: pointer;
+  color: #8a8a8a;
+  display: grid;
+  place-items: center;
+  min-height: 22px;
 }
 
 .tab-bar button.active {
-  background: #d0d0d0;
-  border-color: #8f8f8f;
+  color: #4e4e4e;
+}
+
+.nav-icon {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.icon-person {
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.icon-grid {
+  width: 13px;
+  height: 13px;
+  border: 1px solid currentColor;
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor);
+  background-size: 1px 100%, 100% 1px;
+  background-position: center center, center center;
+  background-repeat: no-repeat;
+}
+
+.icon-chat {
+  width: 15px;
+  height: 11px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  margin-top: 1px;
+}
+
+.icon-chat::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  bottom: -3px;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(35deg);
+}
+
+.icon-user {
+  width: 15px;
+  height: 15px;
+}
+
+.icon-user::before,
+.icon-user::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-user::before {
+  top: 1px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.icon-user::after {
+  bottom: 0;
+  width: 11px;
+  height: 6px;
+  border: 1px solid currentColor;
+  border-radius: 8px 8px 3px 3px;
+}
+
+.tab-bar.hidden {
+  display: none;
 }
 
 @media (max-width: 420px) {
