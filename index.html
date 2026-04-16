@@ -11,13 +11,11 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="phone" aria-label="Occumate mobile prototype">
-        <header class="phone-head">
-          <h1>Occumate</h1>
-          <p>Interactive prototype based on your Figma frames</p>
-        </header>
-
-        <div class="screen-frame">
+      <section class="phone-mockup" aria-label="Occumate mobile prototype">
+        <div class="phone-hardware">
+          <div class="phone-notch" aria-hidden="true"></div>
+        </div>
+        <div class="phone screen-frame">
           <section class="screen active" id="screen-welcome">
             <div class="centered">
               <h2 class="logo-title">Occumate</h2>
@@ -67,7 +65,7 @@
             <h3>Olivia</h3>
             <article class="match-card">
               <div class="photo-placeholder"></div>
-              <p>I am super organized and enjoy a clean space. Looking for a friendly roommate.</p>
+              <p>Basic profile summary placeholder text.</p>
             </article>
             <div class="chip-row">
               <span>calm</span><span>organized</span><span>non-smoker</span><span>social</span>
@@ -93,6 +91,7 @@
               <button class="icon-btn">≡</button>
               <h2>Messages</h2>
             </div>
+            <input type="text" placeholder="" />
             <div class="message-skeleton"></div>
             <div class="message-skeleton short"></div>
             <div class="message-skeleton"></div>
@@ -123,22 +122,13 @@
         </div>
 
         <nav class="tab-bar" aria-label="App tabs">
-          <button data-go="screen-matches">Matches</button>
-          <button data-go="screen-map">Map</button>
-          <button data-go="screen-auth">Messages</button>
-          <button data-go="screen-profile">Profile</button>
+          <button data-go="screen-matches">👤</button>
+          <button data-go="screen-map">▦</button>
+          <button data-go="screen-auth">💬</button>
+          <button data-go="screen-profile">◌</button>
         </nav>
+        </div>
       </section>
-
-      <aside class="notes">
-        <h2>Prototype Notes</h2>
-        <ul>
-          <li>Mobile-first iPhone-style viewport</li>
-          <li>Welcome, onboarding, questionnaire, match flow</li>
-          <li>Bottom tabs navigate main app screens</li>
-          <li>Ready to publish as static GitHub Pages site</li>
-        </ul>
-      </aside>
     </main>
 
     <script src="./script.js"></script>
