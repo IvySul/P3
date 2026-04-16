@@ -1,136 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Occumate prototype app." />
-    <meta name="theme-color" content="#f2f2f2" />
-    <title>Occumate Prototype</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="app-shell">
-      <section class="phone-mockup" aria-label="Occumate mobile prototype">
-        <div class="phone-hardware">
-          <div class="phone-notch" aria-hidden="true"></div>
-        </div>
-        <div class="phone screen-frame">
-          <section class="screen active" id="screen-welcome">
-            <div class="centered">
-              <h2 class="logo-title">Occumate</h2>
-              <button class="small-btn" data-go="screen-profile-form">Get Started</button>
-              <button class="tiny-link" data-go="screen-auth">Login</button>
-            </div>
-          </section>
 
-          <section class="screen" id="screen-profile-form">
-            <h2>Hello! tell us a little about yourself</h2>
-            <form class="stacked-form">
-              <label>Your Name <input type="text" placeholder="Name" /></label>
-              <div class="row">
-                <label>Birthday <input type="text" placeholder="MM/DD" /></label>
-                <label>Age <input type="text" placeholder="18+" /></label>
-              </div>
-              <label>Sex <input type="text" placeholder="Select" /></label>
-              <label>Ethnicity <input type="text" placeholder="Optional" /></label>
-              <label>Occupation <input type="text" placeholder="Role" /></label>
-              <label>Religion <input type="text" placeholder="Optional" /></label>
-              <label>Politics <input type="text" placeholder="Optional" /></label>
-              <button type="button" class="next-btn" data-go="screen-questionnaire">Knowledge Matching Survey</button>
-            </form>
-          </section>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Untitled</title>
+      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+    </head>
 
-          <section class="screen" id="screen-questionnaire">
-            <h2>Questionnaire</h2>
-            <p class="subtext">Bio</p>
-            <input type="text" placeholder="Write a short bio" />
-            <p class="subtext">Living Habits</p>
-            <form class="stacked-form">
-              <label>Do you smoke, vape, or use other substances?<input type="text" placeholder="Answer" /></label>
-              <label>Do you have any pets?<input type="text" placeholder="Answer" /></label>
-              <label>How often do you host your guests?<input type="text" placeholder="Answer" /></label>
-              <label>Nightlight or dark?<input type="text" placeholder="Answer" /></label>
-              <label>Are you a gym person?<input type="text" placeholder="Answer" /></label>
-              <label>Noise level<input type="text" placeholder="Answer" /></label>
-              <button type="button" class="next-btn" data-go="screen-matches">See Matching</button>
-            </form>
-          </section>
-
-          <section class="screen has-tabs" id="screen-matches">
-            <div class="top-bar">
-              <button class="icon-btn">≡</button>
-              <h2>Matches</h2>
-            </div>
-            <h3>Olivia</h3>
-            <article class="match-card">
-              <div class="photo-placeholder"></div>
-              <p>Basic profile summary placeholder text.</p>
-            </article>
-            <div class="chip-row">
-              <span>calm</span><span>organized</span><span>non-smoker</span><span>social</span>
-            </div>
-            <ul class="list">
-              <li>✅ Similar sleep habits</li>
-              <li>✅ Introvert/extrovert fit</li>
-              <li>✅ Neat levels align</li>
-              <li>⚠︎ Guest frequency differs</li>
-            </ul>
-          </section>
-
-          <section class="screen has-tabs" id="screen-map">
-            <div class="top-bar">
-              <button class="icon-btn">≡</button>
-              <h2>Map</h2>
-            </div>
-            <div class="map-placeholder"></div>
-          </section>
-
-          <section class="screen has-tabs" id="screen-auth">
-            <div class="top-bar">
-              <button class="icon-btn">≡</button>
-              <h2>Messages</h2>
-            </div>
-            <input type="text" placeholder="" />
-            <div class="message-skeleton"></div>
-            <div class="message-skeleton short"></div>
-            <div class="message-skeleton"></div>
-          </section>
-
-          <section class="screen has-tabs" id="screen-profile">
-            <div class="profile-head">
-              <div class="avatar"></div>
-              <div>
-                <p class="subtext">Your Profile</p>
-                <h2>Ava Perez</h2>
-              </div>
-            </div>
-            <article class="match-card">
-              <div class="photo-placeholder"></div>
-              <p>Student, clean roommate, and early riser.</p>
-            </article>
-            <div class="chip-row">
-              <span>organized</span><span>quiet</span><span>clean</span><span>social</span>
-            </div>
-            <ul class="list">
-              <li>✔ Non-smoker</li>
-              <li>✔ Pet friendly</li>
-              <li>✔ Likes routine</li>
-              <li>✔ Early riser</li>
-            </ul>
-          </section>
-        </div>
-
-        <nav class="tab-bar" aria-label="App tabs">
-          <button data-go="screen-matches" aria-label="Matches"><span class="nav-icon icon-person"></span></button>
-          <button data-go="screen-map" aria-label="Map"><span class="nav-icon icon-grid"></span></button>
-          <button data-go="screen-auth" aria-label="Messages"><span class="nav-icon icon-chat"></span></button>
-          <button data-go="screen-profile" aria-label="Profile"><span class="nav-icon icon-user"></span></button>
-        </nav>
-        </div>
-      </section>
-    </main>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="./src/main.tsx"></script>
+    </body>
+  </html>
+  
