@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dummy Model App - create and preview model profiles in a clean, responsive landing page."
+    />
+    <meta name="theme-color" content="#0f1222" />
+    <title>Dummy Model App</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#" class="logo" aria-label="Dummy Model App home">DummyModel</a>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+          Menu
+        </button>
+        <nav aria-label="Main navigation" id="main-nav">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#models">Models</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow">Create Dummy Model App</p>
+            <h1>Build and preview digital model concepts fast</h1>
+            <p class="hero-copy">
+              Publish-ready static website that showcases model profiles, tracks highlights,
+              and captures inquiries with a lightweight front end.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#models">Explore Models</a>
+              <a class="btn btn-secondary" href="#contact">Contact Team</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <h2>Quick Preview</h2>
+            <ul class="checklist">
+              <li>Mobile friendly layout</li>
+              <li>Interactive model cards</li>
+              <li>GitHub Pages deployable</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2>Core Features</h2>
+          <div class="feature-grid">
+            <article class="card">
+              <h3>Responsive UI</h3>
+              <p>Flexible sections and cards tuned for phone, tablet, and desktop widths.</p>
+            </article>
+            <article class="card">
+              <h3>No Build Step</h3>
+              <p>Plain HTML, CSS, and JavaScript so you can edit and publish immediately.</p>
+            </article>
+            <article class="card">
+              <h3>Client-side Interactions</h3>
+              <p>Search and filter models, plus a contact form success state for demos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="models" class="section muted">
+        <div class="container">
+          <div class="section-head">
+            <h2>Model Directory</h2>
+            <input id="search-input" type="search" placeholder="Search by name or category" aria-label="Search models" />
+          </div>
+          <div class="model-grid" id="model-grid"></div>
+        </div>
+      </section>
+
+      <section id="stats" class="section">
+        <div class="container stat-grid">
+          <article class="card">
+            <p class="stat-label">Profiles</p>
+            <p class="stat-value" id="profiles-count">0</p>
+          </article>
+          <article class="card">
+            <p class="stat-label">Average Rating</p>
+            <p class="stat-value" id="avg-rating">0.0</p>
+          </article>
+          <article class="card">
+            <p class="stat-label">Top Category</p>
+            <p class="stat-value" id="top-category">-</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section muted">
+        <div class="container">
+          <h2>Contact</h2>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Dummy Model App</p>
+        <a href="#" aria-label="Back to top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
